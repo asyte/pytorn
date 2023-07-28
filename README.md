@@ -31,5 +31,12 @@ user_data = await PyTornAPI.aget("user", "basic", user_id=2203763)
 ### URL For Endpoints
 Sometimes you just need to know te url endpoint
 ```
-user_data_url = PyTornapi.url_for("user", "basic", user_id=2203763)
+user_data_url = PyTornAPI.url_for("user", "basic", user_id=2203763)
+```
+
+### Exceptions
+Various exceptions can be raised in the context of getting data from the torn api. PyTornAPI does its best to obfuscate these exceptions.
+```
+try:
+    user_data_url = PyTornAPI.get("user", "basic", user_id=2203763)
 ```

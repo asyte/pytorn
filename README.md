@@ -19,11 +19,15 @@ PyTornAPI.set_key(MY_API_KEY)
 
 You can also pass an API key with each request as such:
 ```
-user_data = PyTornAPI.get_user_basic(user_id=2203763, key=MY_API_KEY)
+user_data = PyTornAPI.get("user", "basic", user_id=2203763, key=MY_API_KEY)
 ```
 
 ### Async
 PyTornAPI fully facilitates asynchronous use through the `aget_` methods
 ```
-user_data = await PyTornAPI.aget_user_basic(user_id=2203763)
+user_data = await PyTornAPI.aget("user", "basic", user_id=2203763)
+```
+
+### URL For Endpoints
+Sometimes you just need to know te url endpoint
 ```

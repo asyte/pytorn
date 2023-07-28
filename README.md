@@ -33,4 +33,3 @@ Sometimes you just need to know te url endpoint
 ```
 user_data_url = PyTornapi.url_for("user", "basic", user_id=2203763)
 ```
-```

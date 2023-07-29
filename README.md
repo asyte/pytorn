@@ -6,21 +6,19 @@ A python based wrapper for the Torn API. This can be used in your code to easily
 ```
 from pytornapi import PyTornAPI
 ...
+
+user_data = PyTornAPI.get("user", "basic", user_id=2203763, key=MY_API_KEY)
+
 ```
 
 ### API Keys
-You must use at least a public api key to access any torn api endpoints.  Please be aware of the rate limitations as described in the [Torn API Documentation](https://www.torn.com/api.html#).
-
-You can set a default api key to be used any time an API call is made.
+You must provide, at the the very least, a public torn api key to access any torn api endpoints. As you've seen, you can pass a key with each api request using the `key` argument. You can also set a default api key to be used any time an API call is made.
 ```
 # Set a default api key
 PyTornAPI.set_key(MY_API_KEY)
+user_data = PyTornAPI.get("user", "basic", user_id=2203763)
 ```
-
-You can also pass an API key with each request as such:
-```
-user_data = PyTornAPI.get("user", "basic", user_id=2203763, key=MY_API_KEY)
-```
+> **_NOTE:_** Please be aware of the rate limitations as described in [the Torn API Documentation](https://www.torn.com/api.html#) as well as which endpoints are supported by which key types.
 
 ### Async
 PyTornAPI fully facilitates asynchronous use through the `aget_` methods
